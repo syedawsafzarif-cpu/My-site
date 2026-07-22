@@ -341,7 +341,8 @@ h1 {
 
 
 .email {
-    background: #f51202;
+    background:
+     linear-gradient(45deg,#7c1f1f,#e4af00,#0172ce);
 }
 
 
