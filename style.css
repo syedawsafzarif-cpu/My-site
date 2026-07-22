@@ -1,109 +1,405 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:linear-gradient(135deg,#005bea,#00c6fb);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
+
+:root {
+    --glass: rgba(255,255,255,0.12);
+    --white: #ffffff;
+    --shadow: rgba(0,0,0,0.35);
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    overflow-x: hidden;
+
+    background: #020024;
+}
+
+
+/* Animated background */
+
+.background {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        #005bea,
+        #00c6fb,
+        #7b2ff7,
+        #ff0080
+    );
+
+    background-size: 400% 400%;
+
+    animation: gradientMove 12s ease infinite;
+
+    z-index: -1;
+}
+
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+
+/* Main card */
+
+.card {
+
+    width: 390px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    color: white;
+
+    background: var(--glass);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+    0 25px 60px var(--shadow);
+
+    animation: cardEnter 1s ease;
+
+}
+
+
+
+@keyframes cardEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+        translateY(40px)
+        scale(.95);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+
+/* Profile logo */
+
+.logo {
+
+    width: 170px;
+
+    height: 170px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid white;
+
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,.7);
+
+
+    margin-bottom: 20px;
+
+
+    animation: glow 3s infinite alternate;
+
+}
+
+
+
+@keyframes glow {
+
+    from {
+
+        box-shadow:
+        0 0 20px white;
+
+    }
+
+
+    to {
+
+        box-shadow:
+        0 0 45px #00c6fb;
+
+    }
+
+}
+
+
+
+
+h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.subtitle {
+
+    color: rgba(255,255,255,.85);
+
+    margin-bottom: 30px;
+
+    font-size: 17px;
+
+}
+
+
+
+/* Social buttons */
+
+.button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+
+    text-decoration: none;
+
+    color:white;
+
+
+    padding: 16px;
+
+
+    margin: 15px 0;
+
+
+    border-radius: 18px;
+
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+
+    transition:
+    .35s ease;
+
+
+    position: relative;
+
     overflow:hidden;
+
 }
 
-.card{
-    width:370px;
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(18px);
-    border-radius:25px;
-    padding:40px 30px;
-    text-align:center;
-    box-shadow:0 20px 45px rgba(0,0,0,.35);
-    color:white;
-    animation:fadeIn .8s ease;
+
+
+.button::before {
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.5),
+    transparent
+    );
+
+
+    transition:.5s;
+
 }
 
-.logo{
-    width:170px;
-    height:170px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid white;
-    box-shadow:0 0 35px rgba(255,255,255,.6);
-    margin-bottom:20px;
+
+.button:hover::before {
+
+    left:100%;
+
 }
 
-h1{
-    font-size:34px;
-    margin-bottom:8px;
+
+
+.button:hover {
+
+    transform:
+    translateY(-7px)
+    scale(1.04);
+
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.35);
+
 }
 
-.subtitle{
-    margin-bottom:30px;
-    color:#f5f5f5;
+
+
+.button i {
+
+    font-size:22px;
+
 }
 
-.button{
-    display:block;
-    text-decoration:none;
-    color:white;
-    padding:16px;
-    margin:15px 0;
-    border-radius:15px;
-    font-size:18px;
-    font-weight:bold;
-    transition:.35s;
+
+
+/* Social colors */
+
+.instagram {
+
+    background:
+    linear-gradient(45deg,#feda75,#d62976,#962fbf);
+
 }
 
-.button i{
-    margin-right:10px;
-}
 
-.instagram{
-    background:#E1306C;
-}
 
-.linkedin{
+.linkedin {
+
     background:#0077B5;
+
 }
 
-.snapchat{
+
+
+.snapchat {
+
     background:#FFFC00;
+
     color:black;
+
 }
 
-.discord{
+
+
+.discord {
+
     background:#5865F2;
+
 }
+
+
+
+.roblox {
+
+    background:#111;
+
+}
+
+
 
 .button img {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 8px;
+
+    width:24px;
+
+    height:24px;
+
+    object-fit:contain;
+
 }
 
-.button:hover{
-    transform:translateY(-6px) scale(1.05);
-    box-shadow:0 12px 25px rgba(0,0,0,.35);
-}
 
-footer{
+
+
+footer {
+
     margin-top:30px;
+
     font-size:14px;
-    opacity:.85;
+
+    opacity:.8;
+
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(30px);
+
+
+/* Mobile */
+
+@media(max-width:450px){
+
+
+    .card {
+
+        width:90%;
+
+        padding:35px 20px;
+
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
+
+
+    h1 {
+
+        font-size:30px;
+
     }
+
+
+    .logo {
+
+        width:140px;
+
+        height:140px;
+
+    }
+
+
 }
