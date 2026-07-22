@@ -316,7 +316,7 @@ h1 {
 
 .snapchat {
 
-    background:#FFFC00;
+    background:#FFFC00,#1b1b00;
 
     color:black;
 
@@ -342,7 +342,10 @@ h1 {
 
 .email {
     background:
-     linear-gradient(45deg,#ff0101,#e4af00,#1fbd00,#0055c5);
+     linear-gradient(45deg,#ff0101,#0044c2,#f3db00);
+
+     color:black;
+
 }
 
 
