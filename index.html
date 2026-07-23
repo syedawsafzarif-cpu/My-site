@@ -4,103 +4,351 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Syed Awsaf Zarif</title>
+    <title>Syed Awsaf Zarif | Developer • Gamer • Creator</title>
+
+    <meta name="description" content="Official website of Syed Awsaf Zarif">
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-    <div class="background"></div>
+<!-- Loading Screen -->
+<div id="loader">
+    <h1>SAZ</h1>
+    <p>Loading...</p>
+</div>
 
-    <main class="card">
+<!-- Mouse Glow -->
+<div id="cursor-glow"></div>
 
-        <img src="IMG_0990.PNG" alt="Profile Picture" class="logo">
+<!-- Navigation -->
+<header>
 
-        <h1>Syed Awsaf Zarif</h1>
+<nav class="navbar">
 
-        <p class="subtitle">
-            Welcome! Connect with me online.
-        </p>
+<div class="logo">
+    SAZ
+</div>
 
+<ul class="nav-links">
 
-        <div class="social-section">
+<li><a href="#home">Home</a></li>
 
-            <a href="https://www.instagram.com/syed_awsaf_zarif/?hl=en"
-            target="_blank"
-            class="button instagram">
-                <i class="fab fa-instagram"></i>
-                Instagram
-            </a>
+<li><a href="#about">About</a></li>
 
+<li><a href="#projects">Projects</a></li>
 
+<li><a href="#socials">Socials</a></li>
 
-            <a href="https://snapchat.com/t/u5A3s7uX"
-            target="_blank"
-            class="button snapchat">
-                <i class="fab fa-snapchat"></i>
-                Snapchat
-            </a>
+<li><a href="#contact">Contact</a></li>
 
-            <a href="mailto:syedawsafzarif@gmail.com" class="button email">
-            <i class="fas fa-envelope"></i>
-              Email 
-            </a>
+</ul>
 
+<button id="themeToggle">
+    <i class="fa-solid fa-moon"></i>
+</button>
 
-            <a href="https://discord.com/invite/gjMPNrNsXy"
-            target="_blank"
-            class="button discord">
-                <i class="fab fa-discord"></i>
-                Discord
-            </a>
+</nav>
 
+</header>
 
-            <a href="https://www.roblox.com/users/4768178750/profile"
-            target="_blank"
-            class="button roblox">
+<!-- Hero Section -->
 
-                <img src="Roblox_Corporation_2025_logo.svg.webp" alt="Roblox Logo">
+<section id="home" class="hero">
 
-                Roblox
-            </a>
+<div class="hero-content">
 
+<img src="IMG_0990.PNG"
+alt="Profile Picture"
+class="profile">
 
+<h1>
+Syed Awsaf Zarif
+</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+
+Welcome to my official website.
+
+I'm a passionate developer, gamer, and creator who loves building cool projects, learning new technology, and creating amazing experiences.
+
+</p>
+
+<a href="#socials" class="primary-btn">
+Connect With Me
+</a>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about">
+
+<div class="section-title">
+
+<h2>About Me</h2>
+
+<p>
+A little about who I am.
+</p>
+
+</div>
+
+<div class="about-grid">
+
+<div class="card">
+
+<i class="fa-solid fa-code"></i>
+
+<h3>Developer</h3>
+
+<p>
+
+I enjoy creating websites, experimenting with technology, and constantly improving my programming skills.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-gamepad"></i>
+
+<h3>Gamer</h3>
+
+<p>
+
+Gaming has inspired my creativity and helped me appreciate beautiful design and interactive experiences.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-lightbulb"></i>
+
+<h3>Creator</h3>
+
+<p>
+
+I enjoy building projects that combine creativity with technology while continuously learning new skills.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===========================
+     Projects Section
+=========================== -->
+
+<section id="projects">
+
+    <div class="section-title">
+        <h2>Projects</h2>
+        <p>Some of my favorite work.</p>
+    </div>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <h3>Personal Website</h3>
+
+            <p>
+                My Apple-inspired personal website built using HTML,
+                CSS and JavaScript.
+            </p>
+
+            <div class="project-buttons">
+                <a href="#">Live Demo</a>
+                <a href="#">Source Code</a>
+            </div>
         </div>
 
+        <div class="project-card">
+            <h3>Future Project</h3>
 
-        <footer>
-            Built by Syed Awsaf Zarif © 2026
-        </footer>
+            <p>
+                This space is reserved for another awesome project.
+            </p>
 
+            <div class="project-buttons">
+                <a href="#">Coming Soon</a>
+            </div>
+        </div>
 
-    </main>
+    </div>
 
-    <script>
-document.addEventListener("click", function(e) {
+</section>
 
-    const ripple = document.createElement("span");
+<!-- ===========================
+     Socials
+=========================== -->
 
-    ripple.className = "ripple";
+<section id="socials">
 
-    ripple.style.left = e.clientX + "px";
-    ripple.style.top = e.clientY + "px";
+    <div class="section-title">
+        <h2>Let's Connect</h2>
+        <p>Find me on my favorite platforms.</p>
+    </div>
 
+    <div class="social-grid">
 
-    document.body.appendChild(ripple);
+        <a href="https://www.instagram.com/syed_awsaf_zarif/?hl=en"
+        target="_blank"
+        class="social-card instagram">
 
+            <i class="fab fa-instagram"></i>
 
-    setTimeout(() => {
-        ripple.remove();
-    }, 600);
+            <span>Instagram</span>
 
-});
+        </a>
+
+        <a href="https://snapchat.com/t/u5A3s7uX"
+        target="_blank"
+        class="social-card snapchat">
+
+            <i class="fab fa-snapchat"></i>
+
+            <span>Snapchat</span>
+
+        </a>
+
+        <a href="https://discord.com/invite/gjMPNrNsXy"
+        target="_blank"
+        class="social-card discord">
+
+            <i class="fab fa-discord"></i>
+
+            <span>Discord</span>
+
+        </a>
+
+        <a href="https://www.roblox.com/users/4768178750/profile"
+        target="_blank"
+        class="social-card roblox">
+
+            <i class="fas fa-cube"></i>
+
+            <span>Roblox</span>
+
+        </a>
+
+        <a href="mailto:syedawsafzarif@gmail.com"
+        class="social-card email">
+
+            <i class="fas fa-envelope"></i>
+
+            <span>Email</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     Contact
+=========================== -->
+
+<section id="contact">
+
+    <div class="section-title">
+        <h2>Contact Me</h2>
+        <p>Feel free to send me a message.</p>
+    </div>
+
+    <form class="contact-form">
+
+        <input
+        type="text"
+        placeholder="Your Name"
+        required>
+
+        <input
+        type="email"
+        placeholder="Your Email"
+        required>
+
+        <textarea
+        rows="6"
+        placeholder="Your Message"
+        required></textarea>
+
+        <button type="submit">
+
+            Send Message
+
+        </button>
+
+    </form>
+
+</section>
+
+<!-- ===========================
+     Footer
+=========================== -->
+
+<footer>
+
+    <h3>Syed Awsaf Zarif</h3>
+
+    <p>
+        Developer • Gamer • Creator
+    </p>
+
+    <p>
+
+        Designed & Developed by
+        Syed Awsaf Zarif © 2026
+
+    </p>
+
+</footer>
+
+<!-- ===========================
+     Analytics Placeholder
+
+     Replace YOUR-GA-ID with
+     your Google Analytics ID
+=========================== -->
+
+<!--
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID">
 </script>
+
+<script>
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'YOUR-GA-ID');
+
+</script>
+-->
+
+<script src="script.js"></script>
 
 </body>
 </html>
