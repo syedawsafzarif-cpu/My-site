@@ -316,7 +316,8 @@ h1 {
 
 .snapchat {
 
-    background:#FFFC00,#1b1b00;
+    background:
+    linear-gradient(50deg,#FFFC00,#1b1b00);
 
     color:black;
 
