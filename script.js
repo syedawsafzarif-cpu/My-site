@@ -226,14 +226,6 @@ document.querySelector(".contact-form");
 
 if(form){
 
-form.addEventListener("submit",(e)=>{
-
-
-alert("✅ Thanks for your message!");
-
-form.reset();
-
-});
 
 }
 
